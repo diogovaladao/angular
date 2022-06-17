@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   userName = 'Teste';
-  idade = 34;
+  idade = 33;
   userData = {
     email: 'diogo.svaladao@gmail.com',
     perfil: 'Admin',
