@@ -6,6 +6,10 @@
     color: #444;
 }
 
+:root{
+    --ouro: #dec129;
+}
+
 a{
     text-decoration: none;
     color: #444;
@@ -13,5 +17,45 @@ a{
 }
 
 a:hover{
-    color: #dec129;
+    color: var(--ouro);
+}
+
+/* FORM */ 
+form{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input, textarea{
+    padding: .6em;
+    color: #777;
+    font-size: .8em;
+}
+
+input[type="submit"]{
+    background-color: #efefef;
+    border: 2px solid transparent;
+    padding: .6em 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover{
+    color: var(--ouro);
+    border-color: var(--ouro);
+    background-color: transparent;
 }
