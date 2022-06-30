@@ -5,5 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MessagesService {
 
+  /* variável que receberá a mensagem a ser exibida, se estiver vazia nada será exibido */
+  message: string = "";
+
   constructor() { }
 }
