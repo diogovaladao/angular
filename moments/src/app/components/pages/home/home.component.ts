@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   allMoments: Moment[] = []; /* variável para pegar informações na base */
   moments: Moment[] = []; /* variável para filtro que será exibido depois da busca */
-  baseIpiUrl = environment.baseApiUrl;
+  baseApiUrl = environment.baseApiUrl;
 
   constructor(private momentsService: MomentService) { }
 
