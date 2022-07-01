@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Moment } from '../Moment';
 import { environment } from 'src/environments/environment';
 import { formatDate } from '@angular/common';
+import { Response } from '../Response';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,11 @@ export class MomentService {
     createMoment(formatDate: FormData): Observable<FormData> {
       return this.http.post<FormData>(this.apiUrl, formatDate);
   }
+
+  /* método para pegar informações na base de dados */
+  getMoments():Observable<Response<Moment[]>>{
+    return this.http.get<Response<Moment[]>>(this.apiUrl);
+    
+    }
+    
 }
