@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    color: #444;
+}
+
+:root{
+    --ouro: #dec129;
+    --btn-edit: #007bff;
+    --btn-remove: #dc3545
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+    transition: .4s;
+}
+
+a:hover{
+    color: var(--ouro);
+}
+
+/* FORM */ 
+form{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label{
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input, textarea{
+    padding: .6em;
+    color: #777;
+    font-size: .8em;
+}
+
+input[type="submit"]{
+    background-color: #efefef;
+    border: 2px solid transparent;
+    padding: .6em 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover{
+    color: var(--ouro);
+    border-color: var(--ouro);
+    background-color: transparent;
+}
+
+.validation-error p{
+    color: red;
+    margin-top: .4em;
+    border-left: 3px solid red;
+    padding-left: .2em;
+}
+
+/* BOTÕES */
+.edit-btn, .remove-btn{
+    border: 1px solid #efefef;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.4s;
+}
+
+button fa-icon, a fa-icon{
+    margin-right: 0.2em;
+}
+
+.edit-btn, .edit-btn path{
+    border-color: var(--btn-edit);
+    color: var(--btn-edit);
+}
+
+.edit-btn:hover, .edit-btn:hover path{
+    color: white;
+    background-color: var(--btn-edit);
+}
+
+.remove-btn, .remove-btn path{
+    border-color: var(--btn-remove);
+    color: var(--btn-remove);
+}
+
+.remove-btn:hover, .remove-btn:hover path{
+    color: white;
+    background-color: var(--btn-remove);
+}
