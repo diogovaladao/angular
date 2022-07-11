@@ -33,12 +33,19 @@ export class MomentService {
 
 
     /** 
-     * Pega momento de acordo com o ID
+     * Pega momento de acordo com o ID informado
      */ 
     getMoment(id: number):Observable<Response<Moment>>{
       const url = `${this.apiUrl}/${id}`;
       return this.http.get<Response<Moment>>(url);
       
       }
-    
+      
+      /**
+       * Remove informações da base de dados de acrodo com o ID informado
+       */
+      removeMoments(id: number){
+        const url = `${this.apiUrl}/${id}`;
+        return this.http.delete(url);
+      }
 }
