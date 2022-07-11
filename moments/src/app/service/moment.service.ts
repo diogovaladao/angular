@@ -16,15 +16,29 @@ export class MomentService {
 
   constructor(private http: HttpClient) {}
 
-  /* método que salva as informações na base de dados */
+  /**
+   *  Salva as informações na base de dados 
+   */
     createMoment(formatDate: FormData): Observable<FormData> {
       return this.http.post<FormData>(this.apiUrl, formatDate);
   }
 
-  /* método para pegar informações na base de dados */
+  /**
+   * Pega informações na base de dados 
+   */ 
   getMoments():Observable<Response<Moment[]>>{
     return this.http.get<Response<Moment[]>>(this.apiUrl);
     
     }
+
+
+    /** 
+     * Pega momento de acordo com o ID
+     */ 
+    getMoment(id: number):Observable<Response<Moment>>{
+      const url = `${this.apiUrl}/${id}`;
+      return this.http.get<Response<Moment>>(url);
+      
+      }
     
 }
