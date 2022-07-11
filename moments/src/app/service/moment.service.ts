@@ -17,35 +17,33 @@ export class MomentService {
   constructor(private http: HttpClient) {}
 
   /**
-   *  Salva as informações na base de dados 
-   */
-    createMoment(formatDate: FormData): Observable<FormData> {
-      return this.http.post<FormData>(this.apiUrl, formatDate);
+  *  Salva as informações na base de dados 
+  */
+  createMoment(formatDate: FormData): Observable<FormData> {
+    return this.http.post<FormData>(this.apiUrl, formatDate);
   }
 
   /**
    * Pega informações na base de dados 
-   */ 
+  */ 
   getMoments():Observable<Response<Moment[]>>{
     return this.http.get<Response<Moment[]>>(this.apiUrl);
-    
-    }
+  }
 
 
-    /** 
-     * Pega momento de acordo com o ID informado
-     */ 
-    getMoment(id: number):Observable<Response<Moment>>{
-      const url = `${this.apiUrl}/${id}`;
-      return this.http.get<Response<Moment>>(url);
+  /** 
+   * Pega momento de acordo com o ID informado
+  */ 
+  getMoment(id: number):Observable<Response<Moment>>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Response<Moment>>(url);  
+  }
       
-      }
-      
-      /**
-       * Remove informações da base de dados de acrodo com o ID informado
-       */
-      removeMoments(id: number){
-        const url = `${this.apiUrl}/${id}`;
-        return this.http.delete(url);
-      }
+  /**
+  * Remove informações da base de dados de acrodo com o ID informado
+  */
+  removeMoments(id: number){
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
 }
