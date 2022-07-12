@@ -46,4 +46,15 @@ export class MomentService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete(url);
   }
+
+  /**
+   * Atualiza informações na base de dados
+   * @param id ID do momento selecionado
+   * @param formatData conteúdo do momento selecionado
+   * @return efetua a alteração na base de dados
+   */
+  updateMoment(id: number, formatData: FormData): Observable<FormData> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<FormData>(url, formatData);
+  }
 }
