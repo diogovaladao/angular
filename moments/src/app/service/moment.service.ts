@@ -41,6 +41,8 @@ export class MomentService {
       
   /**
   * Remove informações da base de dados de acrodo com o ID informado
+  * @param id ID do momento selecionado
+  * @return efetua a exclusão na base de dados
   */
   removeMoments(id: number){
     const url = `${this.apiUrl}/${id}`;
