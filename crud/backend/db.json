@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Caneta BIC",
+      "preco": 5.89
+    },
+    {
+      "id": 2,
+      "nome": "Barret M82",
+      "preco": 15000.89
+    },
+    {
+      "id": 3,
+      "nome": "Ram 7",
+      "preco": 5275.15
+    },
+    {
+      "nome": "Geladeira",
+      "preco": "1913.99",
+      "id": 4
+    }
+  ]
+}
