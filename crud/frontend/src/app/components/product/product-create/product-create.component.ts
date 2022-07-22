@@ -21,6 +21,10 @@ export class ProductCreateComponent implements OnInit {
   }
   
   creatProduct(): void{
+    if(this.product.price == 0 || this.product.name == ''){
+      this.produdctService.showMessage("Nome ou preço não está preenchido!")
+      return
+    }
     this.produdctService.create(this.product).subscribe(() => {
       this.produdctService.showMessage("Produto criado!")
       this.router.navigate(["/products"])
