@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Alterar Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+           <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name" autocomplete="off"> 
+        </mat-form-field>
+        <mat-form-field> <!--colocar ngIf aqui pra tratar o valor 0 -->
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price" type="number">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateProduct()" color="primary">
+        <i class="material-icons">
+            save
+        </i>
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancel()">
+        <i class="material-icons">
+            highlight_off
+        </i>
+        Cancelar
+    </button>
+</mat-card>

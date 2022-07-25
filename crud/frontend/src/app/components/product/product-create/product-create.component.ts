@@ -15,18 +15,18 @@ export class ProductCreateComponent implements OnInit {
     price: 0
   }
 
-  constructor(private produdctService: ProductService, private router: Router) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
   }
   
   creatProduct(): void{
     if(this.product.price == 0 || this.product.name == ''){
-      this.produdctService.showMessage("Nome ou preço não está preenchido!")
+      this.productService.showMessage("Nome ou preço não está preenchido!")
       return
     }
-    this.produdctService.create(this.product).subscribe(() => {
-      this.produdctService.showMessage("Produto criado!")
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage("Produto criado!")
       this.router.navigate(["/products"])
     })
   }

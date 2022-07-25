@@ -2,8 +2,8 @@
   "produtos": [
     {
       "id": 1,
-      "name": "Caneta BIC",
-      "price": 5.89
+      "name": "Fara",
+      "price": 15463.5
     },
     {
       "id": 2,
@@ -16,12 +16,12 @@
       "price": 5275.15
     },
     {
-      "name": "Geladeira",
+      "name": "AK 47",
       "price": "1913.99",
       "id": 4
     },
     {
-      "name": "AUG",
+      "name": "BAR",
       "price": "2549.50",
       "id": 5
     },
