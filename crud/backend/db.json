@@ -1,9 +1,9 @@
 {
   "produtos": [
     {
-      "id": 1,
       "name": "Fara",
-      "price": 15463.5
+      "price": 17450,
+      "id": 1
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "id": 4
     },
     {
-      "name": "BAR",
+      "name": "M4A1",
       "price": "2549.50",
       "id": 5
     },

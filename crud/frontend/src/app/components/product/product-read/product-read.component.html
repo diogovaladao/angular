@@ -1,5 +1,5 @@
 <div class="mat-elevation-z4">
-    <table mat-table [dataSource]="products">
+    <table mat-table [dataSource]="produtos">
         <!-- Id Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -27,11 +27,11 @@
                         edit
                     </i>
                 </a>
-                <a routerLink="/" class="delete">
+                <button (click)="deletaProtudo(row.id)" class="delete">
                     <i class="material-icons">
                         delete
                     </i>
-                </a>
+                </button>
             </td>
         </ng-container>
 

@@ -39,5 +39,9 @@ export class ProductService {
     return this.http.put<Product>(url, product)
   }
 
-  
+  delete(id: number){
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete(url);
+  }
+
 }

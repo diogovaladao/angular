@@ -10,3 +10,9 @@ table{
 .delete > i{
     color: #e01515;
 }
+
+button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
